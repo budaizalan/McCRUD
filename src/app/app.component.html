@@ -1,10 +1,8 @@
 <div class="font text-center mt-3">
-  <h1>McDonald's Éttermek</h1>
-  <div style="display: flexbox;">
-    <div class="container">
-      @for (restaurant of restaurants; track $index) {
-      <app-restaurant [model]="restaurant"></app-restaurant>
-      }
-    </div>
+  <h1 class="mb-5">McDonald's Éttermek</h1>
+  <div class="card-columns">
+    @for (restaurant of restaurants; track $index) {
+    <app-restaurant [model]="restaurant"></app-restaurant>
+    }
   </div>
 </div>

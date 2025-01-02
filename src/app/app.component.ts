@@ -32,6 +32,7 @@ export class AppComponent {
 
   newRestaurantFunction(){
     this.newRestaurant = {
+      id: undefined,
       store_name: '',
       store_id: undefined,
       city: '',

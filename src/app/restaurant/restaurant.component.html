@@ -29,28 +29,28 @@
 </style>
 
 <body>
-  <div class="pt-5 m-auto">
-    <div class="col-md-6 col-lg-4 pb-3">
-      <div class="card card-custom bg-white border-white border-0">
-        <div class="card-custom-img"
-          style="background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);">
-        </div>
-        <div class="card-custom-avatar">
-          <img class="img-fluid"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbW6oyDTUv4TRIBxsbiAqThujuoIskHaxyoQ&s"
-            alt="Avatar" />
-        </div>
-        <div class="card-body" style="overflow-y: auto">
-          <h4 class="card-title">{{model?.store_name}}</h4>
-          <p class="card-text">Card has minimum height set but will expand if more space is needed for card body
-            content. You can use Bootstrap <a href="https://getbootstrap.com/docs/4.0/components/card/#card-decks"
-              target="_blank">card-decks</a> to align multiple cards nicely in a row.</p>
-        </div>
-        <div class="card-footer" style="background: inherit; border-color: inherit;">
-          <a href="#" class="btn btn-primary">Option</a>
-          <a href="#" class="btn btn-outline-primary">Other option</a>
-        </div>
-      </div>
+  <div class="card card-custom bg-white border-white border-0">
+    <div class="card-custom-img" style="background-color: #DB0007">
+    </div>
+    <div class="card-custom-avatar">
+      <img class="img-fluid"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbW6oyDTUv4TRIBxsbiAqThujuoIskHaxyoQ&s"
+        alt="Avatar" />
+    </div>
+    <div class="card-body" style="overflow-y: auto">
+      <h4 class="card-title">{{model?.store_name}} - {{model?.id}}</h4>
+      <h5 class="card-title">{{model?.state_name}} - ID: {{model?.store_id}}</h5>
+      <h5 class="card-title">Nyitvatartás - In-store: </h5>
+      <a href="#" class="btn btn-warning mr-5">In-store</a>
+      <a href="#" class="btn btn-outline-dark ml-5">Drive-through</a>
+      <p class="card-text" style="text-decoration: underline;">H: {{model?.open_hours?.hoursMonday}}<br />K:
+        {{model?.open_hours?.hoursTuesday}}<br />SZ: {{model?.open_hours?.hoursWednesday}}<br />CS:
+        {{model?.open_hours?.hoursThursday}}<br />P: {{model?.open_hours?.hoursFriday}}<br />SZ:
+        {{model?.open_hours?.hoursSaturday}}<br />V: {{model?.open_hours?.hoursSunday}}<br /></p>
+    </div>
+    <div class="card-footer" style="background: #FFBC0D; border-color: inherit;">
+      <a href="#" class="btn btn-outline mr-5">Szerkesztés</a>
+      <a href="#" class="btn btn-danger ml-5" (click)="deleteRestaurant(model!)">Törlés</a>
     </div>
   </div>
 

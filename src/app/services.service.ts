@@ -21,10 +21,10 @@ export class ServicesService {
   }
 
   modifyRestaurant(restaurant: RestaurantModel): Observable<RestaurantModel> {
-    return this.http.put<RestaurantModel>(this.url + '/' + restaurant.store_id, restaurant);
+    return this.http.put<RestaurantModel>(this.url + '/' + restaurant.id, restaurant);
   }
 
   deleteRestaurant(restaurant: RestaurantModel): Observable<RestaurantModel> {
-    return this.http.delete<RestaurantModel>(this.url + '/' + restaurant.store_id);
+    return this.http.delete<RestaurantModel>(this.url + '/' + restaurant.id);
   }
 }
