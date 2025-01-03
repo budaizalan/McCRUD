@@ -16,13 +16,13 @@
       "longitude": -72.63304,
       "store_url": "https://jobs.mchire.com/jobs?s=868+SUFFIELD+STREET%2c+Agawam%2c+MA",
       "open_hours": {
-        "hoursMonday": "06:00 - 23:00",
-        "hoursTuesday": "06:00 - 23:00",
-        "hoursWednesday": "06:00 - 23:00",
-        "hoursThursday": "06:00 - 23:00",
-        "hoursFriday": "06:00 - 23:00",
-        "hoursSaturday": "06:00 - 00:00",
-        "hoursSunday": "06:00 - 00:00"
+        "hoursMonday": "07:00 - 23:00",
+        "hoursTuesday": "07:00 - 23:00",
+        "hoursWednesday": "07:00 - 23:00",
+        "hoursThursday": "07:00 - 23:00",
+        "hoursFriday": "07:00 - 23:00",
+        "hoursSaturday": "07:00 - 00:00",
+        "hoursSunday": "07:00 - 00:00"
       },
       "open_hours_drive_through": {
         "driveHoursMonday": "06:00 - 23:00",
@@ -4859,6 +4859,31 @@
         "driveHoursSunday": "05:30 - 00:00"
       },
       "id": "74d2"
+    },
+    {
+      "id": "ce55",
+      "store_name": "Joe Biden's Restaurant",
+      "store_id": 42069,
+      "city": "Győr",
+      "state_name": "Győr-Állam",
+      "open_hours": {
+        "hoursMonday": "06:00-23:00",
+        "hoursTuesday": "06:00-23:00",
+        "hoursWednesday": "06:00-23:00",
+        "hoursThursday": "06:00-23:00",
+        "hoursFriday": "06:00-23:00",
+        "hoursSaturday": "06:00-23:00",
+        "hoursSunday": "06:00-23:00"
+      },
+      "open_hours_drive_through": {
+        "driveHoursMonday": "00:00-0:00",
+        "driveHoursTuesday": "00:00-0:00",
+        "driveHoursWednesday": "00:00-0:00",
+        "driveHoursThursday": "00:00-0:00",
+        "driveHoursFriday": "00:00-0:00",
+        "driveHoursSaturday": "00:00-0:00",
+        "driveHoursSunday": "00:00-0:00"
+      }
     }
   ]
 }

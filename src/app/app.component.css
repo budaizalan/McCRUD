@@ -1,0 +1,12 @@
+.joe {
+    position: absolute;
+    background-image: url("new.jpg");
+    background-position: center;
+    background-attachment: unset;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 5px;
+    margin-left: 2vh;
+    height: 100px;
+    width: 100px;
+}

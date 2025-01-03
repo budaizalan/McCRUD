@@ -38,22 +38,36 @@
         alt="Avatar" />
     </div>
     <div class="card-body" style="overflow-y: auto">
-      <h4 class="card-title">{{model?.store_name}} - {{model?.id}}</h4>
+      <h4 class="card-title">{{model?.store_name}} - {{model?.city}}</h4>
       <h5 class="card-title">{{model?.state_name}} - ID: {{model?.store_id}}</h5>
-      <h5 class="card-title">Nyitvatartás - In-store: </h5>
-      <a href="#" class="btn btn-warning mr-5">In-store</a>
-      <a href="#" class="btn btn-outline-dark ml-5">Drive-through</a>
+      <h5 class="card-title">Nyitvatartás: </h5>
+      @if(showInStoreOpenHours) {
+        <a class="btn btn-warning mr-5">In-store</a>
+        <a class="btn btn-outline-dark ml-5" (click)="switch()">Drive-through</a>
+      } @else {
+        <a class="btn btn-outline-dark mr-5" (click)="switch()">In-store</a>
+        <a class="btn btn-warning ml-5">Drive-through</a>
+      }
+      @if (showInStoreOpenHours) {
+
       <p class="card-text" style="text-decoration: underline;">H: {{model?.open_hours?.hoursMonday}}<br />K:
         {{model?.open_hours?.hoursTuesday}}<br />SZ: {{model?.open_hours?.hoursWednesday}}<br />CS:
         {{model?.open_hours?.hoursThursday}}<br />P: {{model?.open_hours?.hoursFriday}}<br />SZ:
         {{model?.open_hours?.hoursSaturday}}<br />V: {{model?.open_hours?.hoursSunday}}<br /></p>
+      } @else {
+        <p class="card-text" style="text-decoration: underline;">H: {{model?.open_hours_drive_through?.driveHoursMonday}}<br />K:
+          {{model?.open_hours_drive_through?.driveHoursTuesday}}<br />SZ: {{model?.open_hours_drive_through?.driveHoursWednesday}}<br />CS:
+          {{model?.open_hours_drive_through?.driveHoursThursday}}<br />P: {{model?.open_hours_drive_through?.driveHoursFriday}}<br />SZ:
+          {{model?.open_hours_drive_through?.driveHoursSaturday}}<br />V: {{model?.open_hours_drive_through?.driveHoursSunday}}<br /></p>
+      }
     </div>
     <div class="card-footer" style="background: #FFBC0D; border-color: inherit;">
-      <a href="#" class="btn btn-outline mr-5">Szerkesztés</a>
+      <a href="#" class="btn btn-outline mr-5" (click)="modifyRestaurant(model!)">Szerkesztés</a>
       <a href="#" class="btn btn-danger ml-5" (click)="deleteRestaurant(model!)">Törlés</a>
     </div>
   </div>
-
 </body>
 
 </html>
+<app-edit-restaurant [model]="modifiedRestaurant" (saved)="saveModified($event)"></app-edit-restaurant>
+<!-- <app-edit-restaurant [model]="newRestaurant" (saved)="saveNew($event)"></app-edit-restaurant> -->

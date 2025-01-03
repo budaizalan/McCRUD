@@ -1,8 +1,11 @@
+<div class="joe" (click)="newRes()"></div>
 <div class="font text-center mt-3">
   <h1 class="mb-5">McDonald's Éttermek</h1>
+  <app-edit-restaurant [model]="newRestaurant" (saved)="saveNew($event)"></app-edit-restaurant>
   <div class="card-columns">
     @for (restaurant of restaurants; track $index) {
     <app-restaurant [model]="restaurant"></app-restaurant>
     }
   </div>
+
 </div>

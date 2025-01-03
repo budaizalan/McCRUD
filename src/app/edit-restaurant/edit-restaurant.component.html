@@ -1,1 +1,41 @@
-<p>edit-restaurant works!</p>
+@if (model) {
+    <div class="modal" tabindex="-1" style="display: block;">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Adatok rögzítése</h5>
+                  <button type="button" class="btn-close" (click)="model = undefined"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Név:</label>
+                            <input type="text" class="form-control" id="name"
+                            [value]="model!.store_name" (change)="model!.store_name = getValue($event)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="restaurantID" class="form-label">Restaurant ID:</label>
+                            <input type="number" class="form-control" id="restaurantID"
+                            [value]="model.store_id" (change)="model.store_id = getNumericValue($event)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="city" class="form-label">Város:</label>
+                            <input type="text" class="form-control" id="city"
+                            [value]="model.city" (change)="model.city = getValue($event)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="stateName" class="form-label">Állam neve:</label>
+                            <input type="text" class="form-control" id="stateName"
+                            [value]="model.state_name" (change)="model.state_name = getValue($event)">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" (click)="model = undefined">Mégsem</button>
+                  <button type="button" class="btn btn-success" (click)="save()">Mentés</button>
+                </div>
+              </div>
+            </div>
+    </div>
+  }
+  
