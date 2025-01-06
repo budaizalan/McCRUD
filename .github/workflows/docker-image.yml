@@ -20,9 +20,9 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag ghcr.io/budaizalan/webtest4azure:$IMAGE_TAG --tag ghcr.io/budaizalan/webtest4azure:latest
+        docker build . --file Dockerfile --tag ghcr.io/budaizalan/mccurd:$IMAGE_TAG --tag ghcr.io/budaizalan/mccurd:latest
         docker login ghcr.io -u budaizalan -p ${{secrets.GHCR_TOKEN}}
-        docker push ghcr.io/budaizalan/webtest4azure:$IMAGE_TAG
-        docker push ghcr.io/budaizalan/webtest4azure:latest
+        docker push ghcr.io/budaizalan/mccurd:$IMAGE_TAG
+        docker push ghcr.io/budaizalan/mccurd:latest
 
           
