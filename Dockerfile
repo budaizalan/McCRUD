@@ -5,4 +5,4 @@ RUN npm install
 RUN npm run build
 
 FROM httpd:2.4
-COPY --from=node /app/dist/mc-curd/browser /usr/local/apache2/htdocs
+COPY --from=node /app/dist/mc-crud/browser /usr/local/apache2/htdocs
